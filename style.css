@@ -21,39 +21,33 @@ body {
 /* 그리드 버튼 정렬 */
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 120px);
-  grid-template-rows: repeat(2, 120px);
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 5vw;
+  width: 90vw;
+  max-width: 500px;
+  aspect-ratio: 1 / 1; /* 정사각형 모양으로 유지됨 */
 }
 
 /* 버튼 스타일 */
 .grid button {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1 / 1;
   background-color: #F4C376;
-  color: #3b2f1d; /* 가독성 좋은 어두운 글자색 */
+  color: #3b2f1d;
   border: none;
-  border-radius: 20px;
-  font-size: 1rem;
+  border-radius: 15px;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   font-weight: bold;
   cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: 0.2s;
 }
 
 .grid button:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   background-color: #f2b456;
 }
 
-/* 모바일 대응 */
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: repeat(2, 100px);
-    grid-template-rows: repeat(2, 100px);
-    gap: 15px;
-  }
-
-  .grid button {
-    font-size: 0.9rem;
-  }
+.grid button:hover {
+  transform: scale(1.03);
+  background-color: #f2b456;
 }
