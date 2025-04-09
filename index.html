@@ -8,19 +8,15 @@
   <title>davinchi club</title>
 </head>
 <body>
-    <main class="container">
-        <article>
-            <h2>동아리 구경하기</h2>
-        <button onclick="mid_club()">중앙 동아리</button>
-        <button onclick="coll_club()">단과대 동아리</button>
-
-        <!-- 팝업 모달 -->
-        <div id="myModal" style="display:none; position:fixed; top:30%; left:50%; transform:translateX(-50%); background:white; padding:1rem; border:1px solid #ccc; box-shadow:0 0 10px rgba(0,0,0,0.2); z-index:1000;">
-        <p>아직 구현이 되지 않았습니다!<br>불편을 드려 죄송합니다.</p>
-        <button onclick="closeModal()">확인</button>
-
-      </main>
-    
+    <main class="center">
+      <h5>중앙대학교 다빈치 캠버스 동아리 통합 플랫폼</h5>
+      <h1>다빈치 클럽</h1>
+      <div class="grid">
+        <button onclick="look_club()">동아리<br>둘러보기</button>
+        <button onclick="cart_club()">동아리<br>장바구니</button>
+        <button onclick="my_club()">나의<br>동아리</button>
+        <button onclick="wr_club()">게시물<br>작성하기</button>
+      </div>
     <script src="script.js"></script>
 </body>
 </html>
