@@ -7,6 +7,25 @@ height: 100vh;
 font-family: sans-serif;
 }
 
+.home-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #fff6e8;
+    color: white;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 10%;
+    padding: 8px 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .home-btn:hover {
+    background-color: #723613;
+  }
+
+  
 .title {
     font-size: 2rem;
     font-weight: bold;
@@ -55,3 +74,15 @@ font-family: sans-serif;
     font-weight: bold;
     pointer-events: none;
   }
+
+.responsive-box {
+    position: relative;
+    top: -33px;
+    padding: 1.5rem;
+    width: 100%;   
+    height: 50%;                 
+    background-color: #fff6e8;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}

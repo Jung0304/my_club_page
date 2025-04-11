@@ -16,3 +16,7 @@ function selectOnly(btn) {
     });
     btn.classList.add('active');
 }
+
+function home() {
+    window.location.href = "../index.html";
+}
