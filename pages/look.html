@@ -14,15 +14,15 @@
     <div class="title">다빈치클럽</div>
 
     <div class="button-row">
-      <button class="active"onclick="selectOnly(this)">
+      <button class="active"onclick="selectOnly(this); midClubBox();">
         <span class="label">중앙</span>
       </button>
-      <button onclick="selectOnly(this)">
+      <button onclick="selectOnly(this); departClubBox();">
         <span class="label">단과</span>
       </button>
     </div>
 
-    <div class="responsive-box">
+    <div class="responsive-box" id="content-box">
 
     </div>
     
