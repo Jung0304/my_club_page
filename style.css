@@ -1,53 +1,85 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #FEEEDF;
-  font-family: sans-serif;
+* {
+  box-sizing: border-box;
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffa81d;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  height: 100vh;
+  font-family: sans-serif;
 }
 
-/* 가운데 정렬 텍스트 전용 */
-.center {
+.container {
+  width: 90%;
+  max-width: 400px;
+  background-color: #ffa81d;
   text-align: center;
 }
 
-/* 그리드 버튼 정렬 */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #fff6e8;
+  margin-bottom: 1.2rem;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5vw;
-  width: 90vw;
-  max-width: 500px;
-  aspect-ratio: 1 / 1; /* 정사각형 모양으로 유지됨 */
+  grid-template-columns: repeat(2, 120px);
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
-/* 버튼 스타일 */
-.grid button {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  background-color: #F4C376;
-  color: #3b2f1d;
-  border: none;
-  border-radius: 15px;
-  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-  font-weight: bold;
+.file-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   cursor: pointer;
-  transition: 0.2s;
 }
 
-.grid button:hover {
-  transform: scale(1.03);
-  background-color: #f2b456;
+.file-label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #fff;
 }
 
-.grid button:hover {
-  transform: scale(1.03);
-  background-color: #f2b456;
+.file-wrapper:hover .file-label {
+  transform: scale(1.1);
+  font-size: 1.05rem;
+}
+
+svg {
+  width: 100px;
+  height: auto;
+}
+
+.lid {
+  transition: transform 0.4s ease;
+  transform-origin: bottom center;
+}
+
+.file-wrapper:hover .lid {
+  transform: scaleY(0.7); /* 아래로 접히는 애니메이션 */
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  svg {
+    width: 80px;
+  }
 }

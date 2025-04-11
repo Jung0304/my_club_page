@@ -3,20 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
   <link rel="stylesheet" href="style.css" />
   <title>davinchi club</title>
 </head>
 <body>
-    <main class="center">
-      <h5>중앙대학교 다빈치 캠버스 동아리 통합 플랫폼</h5>
-      <h1>다빈치 클럽</h1>
-      <div class="grid">
-        <button onclick="look_club()">동아리<br>둘러보기</button>
-        <button onclick="cart_club()">동아리<br>장바구니</button>
-        <button onclick="my_club()">나의<br>동아리</button>
-        <button onclick="wr_club()">게시물<br>작성하기</button>
+  <div class="container">
+    <div class="subtitle">중앙대학교 다빈치캠퍼스 동아리 통합 플랫폼</div>
+    <div class="title">다빈치클럽</div>
+
+    <div class="grid">
+      <!-- 파일 버튼 1 -->
+      <div class="file-wrapper" onclick="alert('동아리 둘러보기')">
+        <svg viewBox="0 0 100 80">
+          <path d="M0 0 H40 L50 15 H100 V70 H0 Z" fill="#F4C376" />
+          <rect class="lid" x="0" y="20" width="100" height="80" rx="8" ry="8" fill="#FFD591" />
+        </svg>
+        <div class="file-label">동아리<br>둘러보기</div>
       </div>
-    <script src="script.js"></script>
+
+      <!-- 파일 버튼 2 -->
+      <div class="file-wrapper" onclick="alert('장바구니')">
+        <svg viewBox="0 0 100 80">
+          <path d="M0 0 H40 L50 15 H100 V70 H0 Z" fill="#F4C376" />
+          <rect class="lid" x="0" y="20" width="100" height="80" rx="8" ry="8" fill="#FFD591" />
+        </svg>
+        <div class="file-label">동아리<br>장바구니</div>
+      </div>
+
+      <!-- 파일 버튼 3 -->
+      <div class="file-wrapper" onclick="alert('내 동아리')">
+        <svg viewBox="0 0 100 80">
+          <path d="M0 0 H40 L50 15 H100 V70 H0 Z" fill="#F4C376" />
+          <rect class="lid" x="0" y="20" width="100" height="80" rx="8" ry="8" fill="#FFD591" />/>
+        </svg>
+        <div class="file-label">나의 동아리</div>
+      </div>
+
+      <!-- 파일 버튼 4 -->
+      <div class="file-wrapper" onclick="alert('게시물 작성')">
+        <svg viewBox="0 0 100 80">
+          <path d="M0 0 H40 L50 15 H100 V70 H0 Z" fill="#F4C376" />
+          <rect class="lid" x="0" y="20" width="100" height="80" rx="8" ry="8" fill="#FFD591" />
+        </svg>
+        <div class="file-label">게시물 작성</div>
+      </div>
+    </div>
 </body>
 </html>
