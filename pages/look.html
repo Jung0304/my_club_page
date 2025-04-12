@@ -9,7 +9,15 @@
 </head>
 <body>
   <div class="container">
-    <button class="home-btn" onclick="home()">🏠</button>
+    <div class="top-bar">
+      <button class="home-btn" onclick="home()">🏠</button>
+      <div class="right-buttons">
+        <button class="cart-btn" onclick="alert('장바구니 구현중')">🛒</button>
+        <button class="profile-btn" onclick="alert('프로필 구현중')">프로필</button>
+      </div>
+    </div>
+    
+
     <div class="subtitle">중앙대학교 다빈치캠퍼스 동아리 통합 플랫폼</div>
     <div class="title">다빈치클럽</div>
 
@@ -27,5 +35,6 @@
     </div>
     
     <script src="script.js"></script>
+  </div>
 </body>
 </html>

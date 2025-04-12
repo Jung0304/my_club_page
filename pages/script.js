@@ -19,7 +19,10 @@ function showClubBox(text,intro) {
         <div class="inner-card">
         <h3>${text}</h3>
         <p>${intro}</p>
-        <button onclick="alert('신청됐습니다!')">신청하기</button>
+        <div class="card-buttons">
+            <button onclick="alert('장바구니에 담았습니다')">🛒</button>
+            <button onclick="alert('신청됐습니다!')">신청하기</button>
+        </div>
         </div>
 `;
 }
@@ -27,8 +30,8 @@ function showClubBox(text,intro) {
 function midClubBox() {
     const box = document.getElementById("content-box");
     box.innerHTML = ""
-    showClubBox('꿈틀이','다빈치 캠퍼스 중앙 댄스 동아리입니다.')
-    showClubBox('그림자 찾기','다빈치 캠퍼스 중앙 영화 동아리입니다')
+    showClubBox('꿈틀이','다빈치 캠퍼스 댄스 중앙 동아리입니다.')
+    showClubBox('그림자 찾기','다빈치 캠퍼스 영화 중앙 동아리입니다')
 }
 
 function scrollToSection(id) {
