@@ -91,13 +91,53 @@ font-family: sans-serif;
     background-color: #fff6e8;
     border: none;
     border-radius: 10px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;    
+    overflow-y: auto;        
+    scroll-behavior: smooth;  
+}
+
+.responsive-box::-webkit-scrollbar {
+    width: 6px;
+}
+.responsive-box::-webkit-scrollbar-thumb {
+    background-color: #f4c376;
+    border-radius: 10px;
+}
+.responsive-box::-webkit-scrollbar-track {
+    background-color: #ffeccc;
 }
 
 .inner-card {
-    background-color: #FCE7C1;
-    border-radius: 8px;
-    padding: 1rem;
+  background-color: #FCE7C1;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+.category-tabs {
+    display: flex;
+    gap: 1rem;
     margin-bottom: 1rem;
-    box-shadow: 0 0 4px rgba(0,0,0,0.1);
+    padding: 0 1rem;
+    overflow-x: auto;
   }
+  
+  .category-tabs button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #f4c376;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .category-tabs button:hover {
+    background-color: #fbd28b;
+  }
+  
+  .category-section {
+    margin-bottom: 2rem;
+  }
+  
