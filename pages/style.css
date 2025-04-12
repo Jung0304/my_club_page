@@ -151,6 +151,15 @@ font-family: sans-serif;
   box-shadow: 0 0 4px rgba(0,0,0,0.1);
 }
 
+.inner-card h3 {
+    color: #21456d; /* 예시: 진한 갈색 */
+  }
+  
+  .inner-card p {
+    color: #535353; /* 예시: 짙은 회색 */
+  }
+  
+
 .card-buttons {
     margin-top: 1rem;
     display: flex;
@@ -159,7 +168,7 @@ font-family: sans-serif;
   }
   
   .card-buttons button {
-    background-color: #f4c376;
+    background-color: #2b8eb9;
     border: none;
     border-radius: 6px;
     padding: 0.4rem 0.8rem;
@@ -169,7 +178,7 @@ font-family: sans-serif;
   }
   
   .card-buttons button:hover {
-    background-color: #fbd28b;
+    background-color: #045e85;
   }
 
 .category-tabs {
