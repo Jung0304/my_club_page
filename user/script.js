@@ -1,13 +1,13 @@
-function look_club() {
+function home() {
   window.location.href = "../index.html";
 }
-function cart_club() {
-  window.location.href = "../cart.html";
+function page_club() {
+  window.location.href = "./page.html";
 }
 function my_club() {
-  window.location.href = "../my.html";
+  window.location.href = "./profile.html";
 }
-function wr_club() {
-  window.location.href = "../wr.html";
+function sub_club() {
+  window.location.href = "./subman.html";
 }
 

@@ -17,6 +17,7 @@ function toggleMenu() {
   overlay.classList.toggle("active", isActive);
 }
 
+
 function closeMenu() {
   document.getElementById("sideMenu").classList.remove("active");
   document.getElementById("overlay").classList.remove("active");
@@ -90,4 +91,3 @@ function departClubBox() {
       showClubBox("농구 동아리", "슬램덩크의 꿈", "sports");
   }
 
-  

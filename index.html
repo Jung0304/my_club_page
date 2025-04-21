@@ -15,8 +15,24 @@
       <li><a href="cal.html">동아리 달력</a></li>
     </ul>
     <div class="manager-link">
-      <a href="user/login.html">🔐 동아리 관계자</a>
-    </div>
+      <a href="#" id="managerLink">🔐 동아리 관계자</a>
+    </div>  
+    <script type="module">
+      import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+      import { auth } from "./firebase.js";
+    
+      document.getElementById("managerLink").addEventListener("click", (e) => {
+        e.preventDefault();
+        onAuthStateChanged(auth, (user) => {
+          if (user) {
+            window.location.href = "user/user.html";
+          } else {
+            window.location.href = "user/login.html";
+          }
+        });
+      });
+    </script>
+
   </div>
   <div id="overlay" class="overlay" onclick="closeMenu()"></div>
 

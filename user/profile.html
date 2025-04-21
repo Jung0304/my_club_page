@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>계정 관리</title>
+  <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="acc.css" />
+</head>
+<body>
+    <div class="container">
+  
+      <!-- ✅ 박스 위의 헤더 줄 -->
+      <div class="header-bar">
+        <div class="left-buttons">
+          <button onclick="history.back()">⬅️</button>
+          <button onclick="window.location.href='../index.html'">🏠</button>
+        </div>
+        <div class="page-title">다빈치클럽</div>
+      </div>
+  
+      <!-- ✅ 본문 박스 -->
+      <div class="account-box">
+        <h2>계정 관리</h2>
+  
+        <div class="section">
+          <label for="intro">✏️ 한 줄 소개</label>
+          <textarea id="intro" rows="2" placeholder="우리 동아리는..."></textarea>
+          <button onclick="saveIntro()">저장하기</button>
+        </div>
+  
+        <div class="section">
+          <label for="newPw">🔐 비밀번호 변경</label>
+          <input type="password" id="newPw" placeholder="새 비밀번호 입력" />
+          <button onclick="changePassword()">비밀번호 변경</button>
+        </div>
+  
+        <div class="logout">
+          <button class="danger" onclick="logout()">🚪 로그아웃</button>
+        </div>
+      </div>
+    </div>
+  
+    <script type="module" src="acc.js"></script>
+  </body>
+  
+  
