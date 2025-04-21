@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffa81d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  background-color: #ffa81d;
+  text-align: center;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #fff6e8;
+  margin-bottom: 1.2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.file-label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.file-wrapper:hover .file-label {
+  transform: scale(1.1);
+  font-size: 1.05rem;
+}
+
+svg {
+  width: 100px;
+  height: auto;
+}
+
+.lid {
+  transition: transform 0.4s ease;
+  transform-origin: bottom center;
+}
+
+.file-wrapper:hover .lid {
+  transform: scaleY(0.7); /* 아래로 접히는 애니메이션 */
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  svg {
+    width: 80px;
+  }
+}
