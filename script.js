@@ -32,7 +32,7 @@ function showClubBox(text,intro, targetId = "content-box") {
         <h3>${text}</h3>
         <p>${intro}</p>
         <div class="card-buttons">
-            <button onclick="alert('신청됐습니다!')">신청하기</button>
+            <button onclick="alert('구현중')">동아리 알아보기</button>
         </div>
       </div>
 `     ;
