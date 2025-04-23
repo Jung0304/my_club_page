@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-  <title>davinchi club</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="apply.css" />
+  <title>다빈치클럽 신청</title>
 </head>
 <body>
   <div id="sideMenu" class="side-menu">
     <ul>
       <li><a href="index.html">동아리 둘러보기</a></li>
-      <li><a href="apply.html">동아리 신청하기</a></li>
+      <li><a href="apply.html" class="active">동아리 신청하기</a></li>
       <li><a href="cal.html">행사 캘린더</a></li>
     </ul>
     <div class="manager-link">
       <a href="#" id="managerLink">🔐 동아리 관계자</a>
-    </div>  
+    </div>
     <script type="module">
       import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
       import { auth } from "./firebase.js";
@@ -32,21 +32,20 @@
         });
       });
     </script>
-
   </div>
+
   <div id="overlay" class="overlay" onclick="closeMenu()"></div>
 
   <div class="container">
     <div class="top-bar">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <div class="titles-vertical">
-      <div class="subtitle">중앙대학교 다빈치캠퍼스 동아리 통합 플랫폼</div>
-      <div class="title">다빈치클럽</div>
+      <div class="titles-vertical">
+        <div class="subtitle">중앙대학교 다빈치캠퍼스 동아리 신청 페이지</div>
+        <div class="title">다빈치클럽</div>
+      </div>
     </div>
-  </div>
-
     <div class="button-row">
-      <button class="active"onclick="selectOnly(this); midClubBox();">
+      <button class="active" onclick="selectOnly(this); midClubBox();">
         <span class="label">중앙</span>
       </button>
       <button onclick="selectOnly(this); departClubBox();">
@@ -55,10 +54,9 @@
     </div>
 
     <div class="responsive-box" id="content-box">
-
     </div>
     
-    <script src="script.js"></script>
+    <script type="module" src="apply.js"></script>
   </div>
 </body>
 </html>

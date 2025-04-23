@@ -289,17 +289,6 @@ body {
     margin-bottom: 2rem;
   }
   
-  .dimmed {
-    opacity: 0.4;
-    pointer-events: none;
-  }
-  
-  .notice {
-    font-size: 0.85rem;
-    color: red;
-    margin-top: 0.5rem;
-  }
-  
   .calendar-wrapper {
     background: white;
     padding: 1rem;

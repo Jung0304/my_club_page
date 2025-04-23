@@ -1,0 +1,339 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #fff0f0;
+    display: flex;
+    height: 100vh;
+    padding-bottom: 2rem;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #ffa81d;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;     
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+}
+
+/* 사이드 메뉴 스타일 */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -220px;
+    width: 200px;
+    height: 100%;
+    background-color: #fff6e8;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+    transition: left 0.3s ease;
+    padding-top: 4rem;
+    z-index: 1000;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu li {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.side-menu a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+.menu-toggle {
+    width: 40px;
+    height: 40px;
+    background-color: #f4c376;
+    color: white;
+    border: none;
+    border-radius: 10%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.menu-toggle:hover {
+    background-color: #90571b;
+}
+
+.titles-vertical {
+    display: flex;
+    flex-direction: column;   
+    align-items: flex-end;   
+    text-align: right;
+}
+
+.titles-vertical .subtitle {
+    font-size: 0.85rem;
+    color: #fff6e8;
+}
+
+.titles-vertical .title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* 오버레이 (바깥 영역 클릭 감지용) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 999;
+    display: none;
+}
+
+/* 사이드바 활성화 시 오버레이도 함께 표시 */
+    .overlay.active {
+    display: block;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -220px;
+    width: 200px;
+    height: 100%;
+    background-color: #fff6e8;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+    transition: left 0.3s ease;
+    padding-top: 4rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* ⬅️ 상단 메뉴 + 하단 버튼 나누기 */
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu li {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.side-menu a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.side-menu a.active {
+    font-weight: bold;
+    color: #f4a300;
+}
+
+.manager-link {
+    padding: 1rem;
+    border-top: 1px solid #eee;
+    text-align: center;
+    background-color: #fce7c1;
+}
+
+.manager-link a {
+    display: inline-block;
+    color: #723613;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.button-row {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.button-row button {
+    position: relative;
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #723613;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 40px;
+}
+
+.button-row button.active {
+    background-color: #fff6e8;
+    color: white;
+    height: 60px;
+}
+
+.label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 정확히 가운데 고정 */
+    color: #ffa81d;
+    font-size: 1rem;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.responsive-box {
+    position: relative;
+    top: -30px;
+    padding: 1.5rem;
+    width: 100%;   
+    flex-grow: 1;               
+    background-color: #fff6e8;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;    
+    overflow-y: auto;        
+    scroll-behavior: smooth;  
+}
+
+.responsive-box::-webkit-scrollbar {
+    width: 6px;
+}
+.responsive-box::-webkit-scrollbar-thumb {
+    background-color: #f4c376;
+    border-radius: 10px;
+}
+.responsive-box::-webkit-scrollbar-track {
+    background-color: #ffeccc;
+}
+
+
+.card-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    }
+
+.card-buttons button {
+    background-color: #2b8eb9;
+    border: none;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.card-buttons button:hover {
+    background-color: #045e85;
+}
+
+.category-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+    overflow-x: auto;
+}
+
+.category-tabs button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #f4c376;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.category-tabs button:hover {
+    background-color: #fbd28b;
+}
+
+.category-section {
+    margin-bottom: 2rem;
+}
+
+.dimmed {
+    position: relative;
+    filter: brightness(0.6);
+    pointer-events: none;
+}
+
+.notice {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.inner-card {
+    position: relative; /* 오버레이 기준이 되는 부모 */
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+    
+.inner-card h3 {
+        color: #21456d; /* 예시: 진한 갈색 */
+}
+    
+.inner-card p {
+        color: #535353; /* 예시: 짙은 회색 */
+}
+
+.inner-card.dimmed {
+    position: relative;
+    background-color: #eee;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* 오버레이 배경 */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 어두운 반투명 레이어 */
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none; /* 클릭 이벤트 막음 */
+}
+
+/* 메시지 텍스트 */
+.overlay-message {
+    color: rgb(205, 0, 0);
+    background-color: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    z-index: 3;
+}
