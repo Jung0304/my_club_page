@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>다빈치클럽 캘린더</title>
+
+  <!-- ✅ 스타일 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ✅ 사이드메뉴 -->
+  <div id="sideMenu" class="side-menu">
+    <ul>
+      <li><a href="index.html">동아리 둘러보기</a></li>
+      <li><a href="apply.html">동아리 신청하기</a></li>
+      <li><a href="cal.html">행사 캘린더</a></li>
+    </ul>
+    <div class="manager-link">
+      <a href="#" id="managerLink">🔐 동아리 관계자</a>
+    </div>  
+    <script type="module">
+      import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+      import { auth } from "./firebase.js";
+
+      document.getElementById("managerLink").addEventListener("click", (e) => {
+        e.preventDefault();
+        onAuthStateChanged(auth, (user) => {
+          if (user) {
+            window.location.href = "user/user.html";
+          } else {
+            window.location.href = "user/login.html";
+          }
+        });
+      });
+    </script>
+  </div>
+  <div id="overlay" class="overlay" onclick="closeMenu()"></div>
+
+  <!-- ✅ 상단 타이틀 영역 -->
+  <div class="container">
+    <div class="top-bar">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="titles-vertical">
+        <div class="subtitle">중앙대학교 다빈치캠퍼스 동아리 통합 플랫폼</div>
+        <div class="title">다빈치클럽</div>
+      </div>
+    </div>
+
+    <!-- ✅ 캘린더 영역 -->
+    <h2>📅 다빈치클럽 일정</h2>
+    <div id="calendar" style="background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);"></div>
+  </div>
+
+  <!-- ✅ 스크립트 -->
+  <script type="module" src="cal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+</body>
+</html>

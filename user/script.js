@@ -8,6 +8,6 @@ function my_club() {
   window.location.href = "./profile.html";
 }
 function sub_club() {
-  window.location.href = "./subman.html";
+  window.location.href = "./apply_m.html";
 }
 

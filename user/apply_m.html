@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>계정 관리</title>
+  <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="acc.css" />
+</head>
+<body>
+    <div class="container">
+  
+      <!-- ✅ 박스 위의 헤더 줄 -->
+      <div class="header-bar">
+        <div class="left-buttons">
+          <button onclick="history.back()">⬅️</button>
+          <button onclick="window.location.href='../index.html'">🏠</button>
+        </div>
+        <div class="page-title">다빈치클럽</div>
+      </div>
+  
+      <!-- ✅ 본문 박스 -->
+      <div class="account-box">
+        <h2>신청 관리</h2>
+            <div class="toggle-wrapper">
+                <label class="switch">
+                    <input type="checkbox" id="recruitToggle" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="recruitStateText">모집 종료</span>
+            </div>
+          
+
+        <h3>📨 신청서 목록</h3>
+        <div class="application-list" id="applicationList">
+            로딩 중...
+        </div>
+      </div>
+    </div>
+    <script type="module">
+        import { db, doc, setDoc, getDoc } from '../firebase.js';
+      
+        document.addEventListener("DOMContentLoaded", async () => {
+          const toggle = document.getElementById("recruitToggle");
+          const statusText = document.getElementById("recruitStateText");
+          const statusDoc = doc(db, "recruitment", "status");
+      
+          toggle.addEventListener("change", async () => {
+            const isOpen = toggle.checked;
+            await setDoc(statusDoc, { open: isOpen });
+            statusText.textContent = isOpen ? "모집 중" : "모집 종료";
+          });
+      
+          const snapshot = await getDoc(statusDoc);
+          if (snapshot.exists()) {
+            const { open } = snapshot.data();
+            toggle.checked = open;
+            statusText.textContent = open ? "모집 중" : "모집 종료";
+          }
+        });
+    </script>    
+</body> 

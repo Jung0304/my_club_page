@@ -17,6 +17,15 @@ function toggleMenu() {
   overlay.classList.toggle("active", isActive);
 }
 
+const currentPath = window.location.pathname.split("/").pop(); 
+const links = document.querySelectorAll(".side-menu a");
+
+links.forEach(link => {
+  if (link.getAttribute("href") === currentPath) {
+    link.classList.add("active");
+  }
+});
+
 
 function closeMenu() {
   document.getElementById("sideMenu").classList.remove("active");

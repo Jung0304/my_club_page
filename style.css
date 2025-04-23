@@ -1,10 +1,12 @@
 body {
-margin: 0;
-padding: 0;
-background-color: #ffa81d;
-display: flex;
-height: 100vh;
-font-family: sans-serif;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #ffa81d;
+  display: flex;
+  height: 100vh;
+  padding-bottom: 2rem;
+  font-family: sans-serif;
 }
 
 .container {
@@ -141,6 +143,11 @@ font-family: sans-serif;
   color: #333;
   text-decoration: none;
   font-weight: bold;
+}
+
+.side-menu a.active {
+  font-weight: bold;
+  color: #f4a300;
 }
 
 .manager-link {
@@ -282,3 +289,50 @@ font-family: sans-serif;
     margin-bottom: 2rem;
   }
   
+  .dimmed {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  
+  .notice {
+    font-size: 0.85rem;
+    color: red;
+    margin-top: 0.5rem;
+  }
+  
+  .calendar-wrapper {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    min-height: 70vh; /* ✅ 달력 영역의 최소 높이 */
+    box-sizing: border-box;
+    margin-bottom: 10rem;
+    overflow: hidden;
+  }
+  
+  #calendar {
+    max-width: 100%;
+    height: 100%;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* ✅ FullCalendar 헤더 버튼과 텍스트 크기 조정 */
+.fc .fc-toolbar {
+  font-size: 0.9rem; /* 기본은 1rem 이상이야 → 줄이면 줄바꿈 방지 가능 */
+  flex-wrap: wrap; /* 필요한 경우 줄 바꿈 */
+  gap: 0.5rem;
+}
+
+.fc .fc-button {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  margin-bottom: 1vh;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
