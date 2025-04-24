@@ -12,7 +12,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #ffa81d;
 }
 
@@ -294,10 +294,10 @@ body {
     padding: 1rem;
     border-radius: 12px;
     box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    min-height: 70vh; /* ✅ 달력 영역의 최소 높이 */
     box-sizing: border-box;
     margin-bottom: 10rem;
-    overflow: hidden;
+    overflow: auto;
+    max-width: 100%;
   }
   
   #calendar {
@@ -305,23 +305,43 @@ body {
     height: 100%;
     font-family: "Noto Sans KR", sans-serif;
     font-size: 0.9rem;
-    margin-bottom: 2rem;
+    overflow: auto;
+    margin-bottom: 30px;
   }
   
   /* ✅ FullCalendar 헤더 버튼과 텍스트 크기 조정 */
 .fc .fc-toolbar {
-  font-size: 0.9rem; /* 기본은 1rem 이상이야 → 줄이면 줄바꿈 방지 가능 */
-  flex-wrap: wrap; /* 필요한 경우 줄 바꿈 */
+  font-size: 0.85rem; /* 기본은 1rem 이상이야 → 줄이면 줄바꿈 방지 가능 */
+  justify-content: space-between;
   gap: 0.5rem;
 }
 
 .fc .fc-button {
-  padding: 0.3rem 0.6rem;
-  font-size: 0.85rem;
-  margin-bottom: 1vh;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  margin-bottom: 10px;
 }
 
 .fc .fc-toolbar-title {
   font-size: 1rem;
-  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .calendar-wrapper {
+    padding: 0.5rem;
+  }
+
+  .fc .fc-toolbar-title {
+    font-size: 0.9rem;
+  }
+
+  .fc .fc-button {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
 }
