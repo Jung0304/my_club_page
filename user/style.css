@@ -70,7 +70,7 @@ svg {
 }
 
 .file-wrapper:hover .lid {
-  transform: scaleY(0.7); /* 아래로 접히는 애니메이션 */
+  transform: scaleY(0.7); 
 }
 
 @media (max-width: 500px) {

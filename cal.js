@@ -1,4 +1,3 @@
-// ✅ Firebase 관련 임포트
 import { initializeApp, getApps } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
 import {
   getFirestore,
@@ -11,7 +10,6 @@ import {
 } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
 
-// ✅ Firebase 앱 초기화
 const firebaseConfig = {
   apiKey: "AIzaSyBjQqhOynpOatJ4m6SuRwldoGlbQWjhctE",
   authDomain: "my-club-web.firebaseapp.com",
@@ -27,13 +25,11 @@ const auth = getAuth(app);
 
 let currentUser = null;
 
-// ✅ 로그인 상태 감지
 onAuthStateChanged(auth, (user) => {
   currentUser = user;
   console.log(currentUser ? "✅ 로그인됨" : "❌ 로그인 안 됨");
 });
 
-// ✅ FullCalendar 로드 후 렌더링
 document.addEventListener("DOMContentLoaded", () => {
   const calendarEl = document.getElementById("calendar");
 
@@ -49,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
       right: "dayGridMonth,timeGridWeek,timeGridDay"
     },
 
-    // ✅ 일정 클릭 → 삭제
     eventClick: async function (info) {
       const event = info.event;
 
@@ -76,7 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     },
 
-    // ✅ 날짜 클릭 → 일정 추가
     dateClick: async function (info) {
       if (!currentUser) {
         alert("🔒 로그인한 사용자만 일정을 추가할 수 있습니다.");
@@ -106,7 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     },
 
-    // ✅ Firestore에서 일정 불러오기
     events: async function (fetchInfo, successCallback, failureCallback) {
       try {
         const snapshot = await getDocs(collection(db, "calendarEvents"));
@@ -126,7 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
   calendar.render();
 });
 
-// ✅ 사이드 메뉴 기능
 window.toggleMenu = function () {
   const menu = document.getElementById("sideMenu");
   const overlay = document.getElementById("overlay");
@@ -139,7 +131,6 @@ window.closeMenu = function () {
   document.getElementById("overlay").classList.remove("active");
 };
 
-// ✅ 현재 위치 강조
 const currentPath = window.location.pathname.split("/").pop();
 const links = document.querySelectorAll(".side-menu a");
 links.forEach(link => {

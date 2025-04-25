@@ -61,7 +61,7 @@ window.addEventListener('DOMContentLoaded', () => {
 function scrollToSection(id) {
     const section = document.getElementById(id);
     section.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
+}
 
   
   
@@ -98,5 +98,5 @@ function departClubBox() {
       // ⚽ 체육 섹션
       showClubBox("풋살 동아리", "함께 뛰는 즐거움", "sports");
       showClubBox("농구 동아리", "슬램덩크의 꿈", "sports");
-  }
+}
 

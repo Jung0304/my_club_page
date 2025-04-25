@@ -25,7 +25,6 @@ body {
     padding: 0 1rem;
 }
 
-/* 사이드 메뉴 스타일 */
 .side-menu {
     position: fixed;
     top: 0;
@@ -96,7 +95,6 @@ body {
     color: white;
 }
 
-/* 오버레이 (바깥 영역 클릭 감지용) */
 .overlay {
     position: fixed;
     top: 0;
@@ -108,7 +106,6 @@ body {
     display: none;
 }
 
-/* 사이드바 활성화 시 오버레이도 함께 표시 */
     .overlay.active {
     display: block;
 }
@@ -126,7 +123,7 @@ body {
     z-index: 1000;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* ⬅️ 상단 메뉴 + 하단 버튼 나누기 */
+    justify-content: space-between; 
 }
 
 .side-menu ul {
@@ -193,7 +190,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* 정확히 가운데 고정 */
+    transform: translate(-50%, -50%);
     color: #ffa81d;
     font-size: 1rem;
     font-weight: bold;
@@ -287,7 +284,7 @@ body {
 }
 
 .inner-card {
-    position: relative; /* 오버레이 기준이 되는 부모 */
+    position: relative; 
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
@@ -297,11 +294,11 @@ body {
 }
     
 .inner-card h3 {
-        color: #21456d; /* 예시: 진한 갈색 */
+        color: #21456d; 
 }
     
 .inner-card p {
-        color: #535353; /* 예시: 짙은 회색 */
+        color: #535353; 
 }
 
 .inner-card.dimmed {
@@ -311,22 +308,20 @@ body {
     pointer-events: none;
 }
 
-/* 오버레이 배경 */
 .card-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* 어두운 반투명 레이어 */
+    background-color: rgba(0, 0, 0, 0.5); 
     z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
-    pointer-events: none; /* 클릭 이벤트 막음 */
+    pointer-events: none; 
 }
 
-/* 메시지 텍스트 */
 .overlay-message {
     color: rgb(205, 0, 0);
     background-color: none;

@@ -10,10 +10,10 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #ffa81d;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffa81d;
 }
 
 .top-bar {
@@ -23,9 +23,8 @@ body {
   margin-top: 2rem;
   margin-bottom: 1.5rem;
   padding: 0 1rem;
-  }
+}
 
-  /* 사이드 메뉴 스타일 */
 .side-menu {
   position: fixed;
   top: 0;
@@ -96,7 +95,6 @@ body {
   color: white;
 }
 
-/* 오버레이 (바깥 영역 클릭 감지용) */
 .overlay {
   position: fixed;
   top: 0;
@@ -108,7 +106,6 @@ body {
   display: none;
 }
 
-/* 사이드바 활성화 시 오버레이도 함께 표시 */
 .overlay.active {
   display: block;
 }
@@ -126,7 +123,7 @@ body {
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* ⬅️ 상단 메뉴 + 하단 버튼 나누기 */
+  justify-content: space-between; 
 }
 
 .side-menu ul {
@@ -166,63 +163,63 @@ body {
 
 
 .button-row {
-    display: flex;
-    gap: 0.3rem;
+  display: flex;
+  gap: 0.3rem;
 }
 
 .button-row button {
-    position: relative;
-    padding: 12px 24px;
-    font-size: 1rem;
-    background-color: #723613;
-    color: #333;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    height: 40px;
-}
+  position: relative;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #723613;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 40px;
+  }
 
 .button-row button.active {
-    background-color: #fff6e8;
-    color: white;
-    height: 60px;
+  background-color: #fff6e8;
+  color: white;
+  height: 60px;
 }
 
 .label {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* 정확히 가운데 고정 */
-    color: #ffa81d;
-    font-size: 1rem;
-    font-weight: bold;
-    pointer-events: none;
-  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffa81d;
+  font-size: 1rem;
+  font-weight: bold;
+  pointer-events: none;
+}
 
 .responsive-box {
-    position: relative;
-    top: -30px;
-    padding: 1.5rem;
-    width: 100%;   
-    flex-grow: 1;               
-    background-color: #fff6e8;
-    border: none;
-    border-radius: 10px;
-    transition: all 0.3s ease;    
-    overflow-y: auto;        
-    scroll-behavior: smooth;  
+  position: relative;
+  top: -30px;
+  padding: 1.5rem;
+  width: 100%;   
+  flex-grow: 1;               
+  background-color: #fff6e8;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;    
+  overflow-y: auto;        
+  scroll-behavior: smooth;  
 }
 
 .responsive-box::-webkit-scrollbar {
-    width: 6px;
+  width: 6px;
 }
 .responsive-box::-webkit-scrollbar-thumb {
-    background-color: #f4c376;
-    border-radius: 10px;
+  background-color: #f4c376;
+  border-radius: 10px;
 }
 .responsive-box::-webkit-scrollbar-track {
-    background-color: #ffeccc;
+  background-color: #ffeccc;
 }
 
 .inner-card {
@@ -234,84 +231,83 @@ body {
 }
 
 .inner-card h3 {
-    color: #21456d; /* 예시: 진한 갈색 */
-  }
-  
-  .inner-card p {
-    color: #535353; /* 예시: 짙은 회색 */
-  }
-  
+  color: #21456d; 
+}
+
+.inner-card p {
+  color: #535353;
+}
+
 
 .card-buttons {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem; /* 버튼 사이 여백 */
-  }
-  
-  .card-buttons button {
-    background-color: #2b8eb9;
-    border: none;
-    border-radius: 6px;
-    padding: 0.4rem 0.8rem;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.2s ease;
-  }
-  
-  .card-buttons button:hover {
-    background-color: #045e85;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem; 
   }
 
+.card-buttons button {
+  background-color: #2b8eb9;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.card-buttons button:hover {
+  background-color: #045e85;
+}
+
 .category-tabs {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    padding: 0 1rem;
-    overflow-x: auto;
-  }
-  
-  .category-tabs button {
-    padding: 8px 16px;
-    border: none;
-    background-color: #f4c376;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  .category-tabs button:hover {
-    background-color: #fbd28b;
-  }
-  
-  .category-section {
-    margin-bottom: 2rem;
-  }
-  
-  .calendar-wrapper {
-    background: white;
-    padding: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    box-sizing: border-box;
-    margin-bottom: 10rem;
-    overflow: auto;
-    max-width: 100%;
-  }
-  
-  #calendar {
-    max-width: 100%;
-    height: 100%;
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 0.9rem;
-    overflow: auto;
-    margin-bottom: 30px;
-  }
-  
-  /* ✅ FullCalendar 헤더 버튼과 텍스트 크기 조정 */
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  overflow-x: auto;
+}
+
+.category-tabs button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #f4c376;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.category-tabs button:hover {
+  background-color: #fbd28b;
+}
+
+.category-section {
+  margin-bottom: 2rem;
+}
+
+.calendar-wrapper {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  margin-bottom: 10rem;
+  overflow: auto;
+  max-width: 100%;
+}
+
+#calendar {
+  max-width: 100%;
+  height: 100%;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 0.9rem;
+  overflow: auto;
+  margin-bottom: 30px;
+}
+
 .fc .fc-toolbar {
-  font-size: 0.85rem; /* 기본은 1rem 이상이야 → 줄이면 줄바꿈 방지 가능 */
+  font-size: 0.85rem; 
   justify-content: space-between;
   gap: 0.5rem;
 }
@@ -332,16 +328,16 @@ body {
 }
 
 @media (max-width: 480px) {
-  .calendar-wrapper {
-    padding: 0.5rem;
-  }
+.calendar-wrapper {
+  padding: 0.5rem;
+}
 
-  .fc .fc-toolbar-title {
-    font-size: 0.9rem;
-  }
+.fc .fc-toolbar-title {
+  font-size: 0.9rem;
+}
 
-  .fc .fc-button {
-    font-size: 0.7rem;
-    padding: 0.2rem 0.4rem;
-  }
+.fc .fc-button {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.4rem;
+}
 }
